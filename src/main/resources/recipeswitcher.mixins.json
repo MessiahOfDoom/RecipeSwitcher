@@ -1,12 +1,15 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
+  "package": "de.schneider_oliver.recipeswitcher.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "RecipeManagerMixin",
+	"InventoryMixin",
+	"CraftingScreenHandlerMixin"
   ],
   "client": [
-    "ExampleMixin"
+	"CraftingScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

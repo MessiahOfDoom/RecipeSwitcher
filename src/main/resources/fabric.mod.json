@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "recipeswitcher",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Messiahs recipe switcher'",
+  "description": "Inspired by Stimmedcows NoMoreRecipeConflict",
   "authors": [
-    "Me!"
+    "MessiahOfDoom"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://schneider-oliver.de/",
+    "sources": "https://github.com/MessiahOfDoom/RecipeSwitcher"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPLv3",
+  "icon": "assets/recipeswitcher/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "de.schneider_oliver.recipeswitcher.RecipeSwitcher"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "recipeswitcher.mixins.json"
   ],
 
   "depends": {
