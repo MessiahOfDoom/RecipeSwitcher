@@ -25,7 +25,9 @@ public abstract class RecipeManagerMixin implements AdvancedRecipeManager{
 
 	@Inject(at = @At("HEAD"), method = "getFirstMatch(Lnet/minecraft/recipe/RecipeType;Lnet/minecraft/inventory/Inventory;Lnet/minecraft/world/World;)Ljava/util/Optional;", cancellable = true)
 	public <C extends Inventory, T extends Recipe<C>> void getFirstMatch(RecipeType<T> type, C inventory, World world, CallbackInfoReturnable<Optional<T>> info) {
-		info.setReturnValue(getNthMatch(type, inventory, world, ((AdvancedRecipeInventory)inventory).getWrappedMatch()));
+		if (inventory instanceof AdvancedRecipeInventory) {
+			info.setReturnValue(getNthMatch(type, inventory, world, ((AdvancedRecipeInventory)inventory).getWrappedMatch()));
+		}
 	}
 	
 	@Shadow
